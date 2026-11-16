@@ -1,0 +1,561 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+      "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Browse All Books – Homepage",
+          "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+          "line": 105,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-001-P :: homepage displays correct heading and page title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2550,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:25.164Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-95f49-rect-heading-and-page-title-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-5ca561afccebabf12677",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "TC-002-P :: homepage displays exactly 20 book items",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2566,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:27.855Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-dd912-plays-exactly-20-book-items-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-e54bdf90dc492671244d",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 123,
+              "column": 7
+            },
+            {
+              "title": "TC-003-P :: first book displays title, price, rating and availability",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2581,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:30.430Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-765c9-ice-rating-and-availability-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-b6ab54d3cd98b5af092f",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "TC-004-P :: total result count is 1000 and pagination shows page 1 of 50",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2560,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:33.018Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-53089-gination-shows-page-1-of-50-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-5e9b082b5dd7b7d87bb0",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 138,
+              "column": 7
+            },
+            {
+              "title": "TC-005-P :: sidebar displays category navigation including Travel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1928,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:35.585Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-e2d7b-navigation-including-Travel-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-2fb0806714bbbae547b2",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 146,
+              "column": 7
+            },
+            {
+              "title": "TC-006-P :: all 20 Add to basket buttons are visible and enabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2588,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:37.528Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-f8d11-ons-are-visible-and-enabled-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-e6b4a2741b4358e18a30",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 153,
+              "column": 7
+            },
+            {
+              "title": "TC-007-P :: clicking next pagination link loads page 2 with 20 books",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3838,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:40.122Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-cd905--loads-page-2-with-20-books-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-d567068d4fe401348c19",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 162,
+              "column": 7
+            },
+            {
+              "title": "TC-008-F :: no book has an empty or missing title attribute",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1939,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:43.967Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-f6aef--or-missing-title-attribute-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-901130d444dda4471d69",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 174,
+              "column": 7
+            },
+            {
+              "title": "TC-009-F :: no book has a zero or malformed price",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1917,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:45.912Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-11231-s-a-zero-or-malformed-price-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-33f8122623aa03c50096",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 183,
+              "column": 7
+            },
+            {
+              "title": "TC-010-F :: first page has no previous pagination link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2548,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:47.835Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-ecef2-no-previous-pagination-link-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-37f625accb1b6a63cd0f",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 194,
+              "column": 7
+            },
+            {
+              "title": "TC-011-F :: last page has no next pagination link and shows page 50 of 50",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3099,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:50.391Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-3fe2d-ink-and-shows-page-50-of-50-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-c97bf0cb70009bfa255d",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 199,
+              "column": 7
+            },
+            {
+              "title": "TC-012-F :: sidebar does not list a non-existent category",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2568,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T19:12:53.497Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-e3773-ist-a-non-existent-category-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2ab2e9a862dd7399d843-088a310e2d857345231e",
+              "file": "baseline-httpbookstoscrapecom-browse-all-books-on.spec.ts",
+              "line": 206,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-24T19:12:24.769Z",
+    "duration": 31332.006,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

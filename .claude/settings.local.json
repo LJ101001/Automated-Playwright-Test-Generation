@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx playwright *)",
+      "Bash(node -e \"const d=require\\('/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/docs/evaluation/results.json'\\); console.log\\(d.runs.length\\)\")",
+      "Bash(awk '{print $1, $NF}')",
+      "Bash(bash scripts/measure-fault-detection.sh httpbookstoscrapecom-browse-all-books-on)"
+    ]
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+      "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "books.toscrape.com — filter books by the Mystery category",
+          "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+          "line": 66,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-001-P: clicking the Mystery sidebar link filters the catalogue to the Mystery category",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1583,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:37.903Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-065f0-gue-to-the-Mystery-category-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-ed75763be64097048c73",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "TC-002-P: Mystery category page displays a Mystery heading and a Home > Books > Mystery breadcrumb",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2055,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:39.619Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-1af39-me-Books-Mystery-breadcrumb-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-10033ee9d539ac2cc754",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 80,
+              "column": 7
+            },
+            {
+              "title": "TC-003-P: Mystery category page 1 shows the correct result count text and 20 product cards",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1657,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:41.682Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-5be11-t-text-and-20-product-cards-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-58d675d46f386804d571",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 89,
+              "column": 7
+            },
+            {
+              "title": "TC-004-P: paginating within the Mystery category advances to page 2 with the remaining 12 books",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1675,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:43.345Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-b22c3-with-the-remaining-12-books-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-d06b67e84df1c01aa420",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 98,
+              "column": 7
+            },
+            {
+              "title": "TC-005-F: Mystery filtered results do not include a book known to belong to another category",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2014,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:45.026Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-ff1f7--belong-to-another-category-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-db728ae49b2a541dd856",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "TC-006-F: navigating to a nonexistent category URL returns a 404 page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 367,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:47.046Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-dba2a-gory-URL-returns-a-404-page-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-71e0bbc825c9b8a84bf3",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 121,
+              "column": 7
+            },
+            {
+              "title": "TC-007-F: the final page of Mystery results has no next pagination link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1151,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T14:34:47.419Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-3aecb-has-no-next-pagination-link-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d8580835cb0eb414bc26-abb6a4bde5eaccb8e328",
+              "file": "baseline-httpbookstoscrapecom-filter-books-by-the.spec.ts",
+              "line": 130,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-02T14:34:37.530Z",
+    "duration": 11076.945,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

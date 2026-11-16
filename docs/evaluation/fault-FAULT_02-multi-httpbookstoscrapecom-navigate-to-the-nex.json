@@ -1,0 +1,1041 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+      "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "httpbookstoscrapecom-navigate-to-the-nex",
+          "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+          "line": 99,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should show a visible \"next\" control with a non-empty href on page 1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1531,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:31.009Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-16c25--a-non-empty-href-on-page-1-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-0c6f27b413bbdd571f86",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 108,
+              "column": 7
+            },
+            {
+              "title": "should show a visible \"next\" control on page 49",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1671,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:32.676Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-36b22-ble-next-control-on-page-49-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-e949e47545ad2649a166",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "should not render the \"next\" control as hidden on page 1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1053,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:34.357Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-d0bcb-control-as-hidden-on-page-1-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-5d2c36421fad20e22b80",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 121,
+              "column": 7
+            },
+            {
+              "title": "should navigate to page 2 when \"next\" is clicked from page 1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1559,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:35.417Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-8a13c-next-is-clicked-from-page-1-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-fcd925b4af2449d7b3a0",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 127,
+              "column": 7
+            },
+            {
+              "title": "should change the URL after clicking \"next\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1790,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:36.985Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-5d87b-he-URL-after-clicking-next--chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-372628ca898d0b869f67",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 133,
+              "column": 7
+            },
+            {
+              "title": "should not skip to page 3 after a rapid double-click on \"next\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1551,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:38.782Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-c9d96-rapid-double-click-on-next--chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-21e69e9221ae1d86c31a",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 142,
+              "column": 7
+            },
+            {
+              "title": "should display a completely distinct book set on page 2 compared with page 1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4803,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:40.340Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-824ae-page-2-compared-with-page-1-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-dd63f21edb7f562facbf",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 148,
+              "column": 7
+            },
+            {
+              "title": "should not render page 2 as an empty or identical copy of page 1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1782,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:45.154Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-a7b1b-or-identical-copy-of-page-1-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-5905f974470acc19630b",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 157,
+              "column": 7
+            },
+            {
+              "title": "should render between 1 and 20 book items on page 2",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2068,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:46.947Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-a9b64-and-20-book-items-on-page-2-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-7a6fe811b011be307e6e",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 166,
+              "column": 7
+            },
+            {
+              "title": "should advance sequentially to page 3 with a further distinct book set",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2120,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:49.022Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-810d1-a-further-distinct-book-set-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-029f5c6efb4b77dd399f",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 174,
+              "column": 7
+            },
+            {
+              "title": "should not revisit a previously seen page across three consecutive \"next\" clicks",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3118,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:51.148Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-bfb70-ree-consecutive-next-clicks-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-d189553d752b18b6aa3b",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 188,
+              "column": 7
+            },
+            {
+              "title": "should reach page 50 without error when clicking \"next\" from page 49",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:54.273Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-fb999--clicking-next-from-page-49-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-d5fccbe6e8c154709ba0",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 201,
+              "column": 7
+            },
+            {
+              "title": "should not render a \"next\" control on page 50",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1959,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:56.092Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-ae8fa-r-a-next-control-on-page-50-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-f81b6d8ca42ee94e1b99",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 210,
+              "column": 7
+            },
+            {
+              "title": "should still show a visible \"previous\" control on page 50",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1696,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:58.057Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-25ff1-previous-control-on-page-50-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-62467a48c486a114d12f",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "should show \"next\" on page 49 but not on page 50",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2597,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:02:59.759Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-4a2d3--page-49-but-not-on-page-50-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-a2bdb759bb53f9b714be",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 222,
+              "column": 7
+            },
+            {
+              "title": "should show \"Page 2 of 50\" in the page indicator after one \"next\" click",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1871,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:02.363Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-d12ea-icator-after-one-next-click-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-43b5a5637b0c21e973fc",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 231,
+              "column": 7
+            },
+            {
+              "title": "should not retain the page 1 indicator text after navigating to page 2",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1571,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:04.241Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-219b4--after-navigating-to-page-2-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-ea5b92a6d75d6f7312e3",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 238,
+              "column": 7
+            },
+            {
+              "title": "should show a well-formed \"Page 50 of 50\" indicator on the last page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1698,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:05.818Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-88011--indicator-on-the-last-page-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-2b9441319c2bfc58b15e",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 247,
+              "column": 7
+            },
+            {
+              "title": "should return a 404 with no catalogue grid when navigating beyond the last page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1294,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:07.522Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-fd493-gating-beyond-the-last-page-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-edb9913d30a746e2c1f9",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 255,
+              "column": 7
+            },
+            {
+              "title": "should not re-serve page 50's book set on the beyond-last-page URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1710,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:08.822Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-8a96e-on-the-beyond-last-page-URL-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-213e07b2dfee0e67db08",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 262,
+              "column": 7
+            },
+            {
+              "title": "should treat page 50 as valid and page 51 as the exact failure boundary",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2076,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:10.538Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-3c2b2--the-exact-failure-boundary-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-ec3e4a45bd0acdeffef6",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 272,
+              "column": 7
+            },
+            {
+              "title": "should restore page 1's URL and book set after browser back navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1718,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:12.621Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-36902-ter-browser-back-navigation-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-9755732594109d56ffb1",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 282,
+              "column": 7
+            },
+            {
+              "title": "should show the \"next\" control again after navigating back to page 1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1656,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:14.345Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-84376-r-navigating-back-to-page-1-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-dbc81092a57e49e9d831",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 294,
+              "column": 7
+            },
+            {
+              "title": "should restore page 2's URL and book set after back then forward navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1908,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-05T19:03:16.007Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-navig-c4c5b-ack-then-forward-navigation-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b02f962db22b6386e522-cf400f70f7ea5bcf1331",
+              "file": "httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts",
+              "line": 301,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-05T19:02:30.563Z",
+    "duration": 47390.248999999996,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

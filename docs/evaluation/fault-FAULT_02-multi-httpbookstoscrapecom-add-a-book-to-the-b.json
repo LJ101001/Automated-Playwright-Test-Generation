@@ -1,0 +1,561 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+      "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "httpbookstoscrapecom-add-a-book-to-the-b",
+          "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+          "line": 64,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should show a visible, enabled Add to Basket button on the homepage tile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1445,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:30.688Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-f4a9d-button-on-the-homepage-tile-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-2946b01578b774e7ccb6",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 73,
+              "column": 7
+            },
+            {
+              "title": "should not find an Add to Basket button on the product detail page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2210,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:32.267Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-2579f--on-the-product-detail-page-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-d69881bf49cf1c26e9e6",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 80,
+              "column": 7
+            },
+            {
+              "title": "should reload to the current URL with an empty query string when Add to Basket is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1824,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:34.487Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-b52c1-en-Add-to-Basket-is-clicked-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-ec31178d8fac329334fe",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 86,
+              "column": 7
+            },
+            {
+              "title": "should not show any confirmation message when Add to Basket is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1539,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:36.319Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-8ebe7-en-Add-to-Basket-is-clicked-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-d990fe50929db9d64968",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 93,
+              "column": 7
+            },
+            {
+              "title": "should produce the same reload outcome on a second Add to Basket click after re-navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1300,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:37.868Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-02e79-t-click-after-re-navigation-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-98d53e96136091414ec8",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "should not surface any basket counter or duplicate confirmation on a second click",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1434,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:39.180Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-fef36-firmation-on-a-second-click-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-349af65a4da50ce43986",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 110,
+              "column": 7
+            },
+            {
+              "title": "should settle into the defined no-op state with no errors after rapid repeated clicks",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1343,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:40.621Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-309e6-after-rapid-repeated-clicks-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-5ae46ebc9efeab2e0d34",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 119,
+              "column": 7
+            },
+            {
+              "title": "should produce the same reload outcome for two different books",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1198,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:41.971Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-2a134-ome-for-two-different-books-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-ac76e6ba7c28eb2c6afc",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 134,
+              "column": 7
+            },
+            {
+              "title": "should keep the page rendered and interactive after Add to Basket is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1125,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:43.175Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-7a4a5-er-Add-to-Basket-is-clicked-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-2a64934fc80920677b1b",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 145,
+              "column": 7
+            },
+            {
+              "title": "should not raise any uncaught JavaScript errors when Add to Basket is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1151,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:44.307Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-7d0ee-en-Add-to-Basket-is-clicked-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-1721b2e3b67634892078",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 152,
+              "column": 7
+            },
+            {
+              "title": "should render the homepage tile correctly after navigating away and back",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1510,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:45.465Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-98ba3-er-navigating-away-and-back-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-eae3414a1c601ef17d94",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 167,
+              "column": 7
+            },
+            {
+              "title": "should not create any confirmation state from navigation alone with no click",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1209,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:46.982Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-add-a-8ddd7-igation-alone-with-no-click-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f62969066692b2307d2-9a463c192dbb1cfeeb2b",
+              "file": "httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 176,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-04T10:31:30.233Z",
+    "duration": 18010.203,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

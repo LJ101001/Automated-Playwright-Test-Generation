@@ -1,0 +1,379 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+      "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Add a book to the basket (books.toscrape.com)",
+          "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+          "line": 78,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-001-P: add-to-basket button is visible and enabled for an in-stock book on the listing page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1197,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:06.936Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-80aa7-ck-book-on-the-listing-page-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88a95ae2f481e2daed9e-f2670fee64c63128c8da",
+              "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 80,
+              "column": 7
+            },
+            {
+              "title": "TC-002-P: clicking add-to-basket submits without navigating to an error page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6932,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/books\\.toscrape\\.com/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3001/index.html?\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:3001/index.html?\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/books\\.toscrape\\.com/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3001/index.html?\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:3001/index.html?\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts:104:24",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+                          "column": 24,
+                          "line": 104
+                        },
+                        "snippet": "  102 |     await page.waitForLoadState('networkidle');\n  103 |\n> 104 |     await expect(page).toHaveURL(/books\\.toscrape\\.com/);\n      |                        ^\n  105 |     await expect(page.locator('body')).not.toContainText('404 Not Found');\n  106 |     await expect(booksPage.productPods).toHaveCount(TEST_DATA.expectedPodCount);\n  107 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+                            "column": 24,
+                            "line": 104
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/books\\.toscrape\\.com/\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:3001/index.html?\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:3001/index.html?\"\u001b[22m\n\n\n  102 |     await page.waitForLoadState('networkidle');\n  103 |\n> 104 |     await expect(page).toHaveURL(/books\\.toscrape\\.com/);\n      |                        ^\n  105 |     await expect(page.locator('body')).not.toContainText('404 Not Found');\n  106 |     await expect(booksPage.productPods).toHaveCount(TEST_DATA.expectedPodCount);\n  107 |   });\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts:104:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:08.266Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-b1253-navigating-to-an-error-page-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-b1253-navigating-to-an-error-page-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+                        "column": 24,
+                        "line": 104
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "88a95ae2f481e2daed9e-39d41878b46bc281cb64",
+              "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 94,
+              "column": 7
+            },
+            {
+              "title": "TC-003-P: listing card displays matching title, price and stock status",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6482,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product_pod').filter({ has: locator('h3 a[title=\"A Light in the Attic\"]') }).locator('p.price_color')\nExpected substring: \u001b[32m\"£5\u001b[7m1.77\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"£5\u001b[7m3.74\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product_pod').filter({ has: locator('h3 a[title=\"A Light in the Attic\"]') }).locator('p.price_color')\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"price_color\">£53.74</p>\u001b[22m\n\u001b[2m      - unexpected value \"£53.74\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product_pod').filter({ has: locator('h3 a[title=\"A Light in the Attic\"]') }).locator('p.price_color')\nExpected substring: \u001b[32m\"£5\u001b[7m1.77\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"£5\u001b[7m3.74\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product_pod').filter({ has: locator('h3 a[title=\"A Light in the Attic\"]') }).locator('p.price_color')\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"price_color\">£53.74</p>\u001b[22m\n\u001b[2m      - unexpected value \"£53.74\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts:116:43",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+                          "column": 43,
+                          "line": 116
+                        },
+                        "snippet": "  114 |     const pod = booksPage.podByTitle(TEST_DATA.productTitle);\n  115 |     await expect(pod.locator('h3 a')).toHaveAttribute('title', TEST_DATA.productTitle);\n> 116 |     await expect(booksPage.podPrice(pod)).toContainText(TEST_DATA.productPrice);\n      |                                           ^\n  117 |     await expect(booksPage.podAvailability(pod)).toContainText('In stock');\n  118 |   });\n  119 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+                            "column": 43,
+                            "line": 116
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.product_pod').filter({ has: locator('h3 a[title=\"A Light in the Attic\"]') }).locator('p.price_color')\nExpected substring: \u001b[32m\"£5\u001b[7m1.77\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"£5\u001b[7m3.74\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.product_pod').filter({ has: locator('h3 a[title=\"A Light in the Attic\"]') }).locator('p.price_color')\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"price_color\">£53.74</p>\u001b[22m\n\u001b[2m      - unexpected value \"£53.74\"\u001b[22m\n\n\n  114 |     const pod = booksPage.podByTitle(TEST_DATA.productTitle);\n  115 |     await expect(pod.locator('h3 a')).toHaveAttribute('title', TEST_DATA.productTitle);\n> 116 |     await expect(booksPage.podPrice(pod)).toContainText(TEST_DATA.productPrice);\n      |                                           ^\n  117 |     await expect(booksPage.podAvailability(pod)).toContainText('In stock');\n  118 |   });\n  119 |\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts:116:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:15.693Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-6735b-itle-price-and-stock-status-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-6735b-itle-price-and-stock-status-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+                        "column": 43,
+                        "line": 116
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "88a95ae2f481e2daed9e-1d8f3bee1918a6939a5d",
+              "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 110,
+              "column": 7
+            },
+            {
+              "title": "TC-004-F: navigating to a non-existent product URL returns 404 without a basket control",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 344,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:22.760Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-5e423-04-without-a-basket-control-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88a95ae2f481e2daed9e-f791b0e27d9090b7bfa4",
+              "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 121,
+              "column": 7
+            },
+            {
+              "title": "TC-005-F: product detail page has no add-to-basket button for the viewed book",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1153,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:23.242Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-cee70--button-for-the-viewed-book-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88a95ae2f481e2daed9e-ac9786063c2ea456bad5",
+              "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 131,
+              "column": 7
+            },
+            {
+              "title": "TC-006-F: no basket indicator appears anywhere after clicking add-to-basket",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1680,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-04T10:31:24.402Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-763a9-fter-clicking-add-to-basket-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "88a95ae2f481e2daed9e-8888662ca5b7efa90e4d",
+              "file": "baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts",
+              "line": 142,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-04T10:31:06.501Z",
+    "duration": 19612.794,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,895 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+      "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "httpbookstoscrapecom-filter-books-by-the",
+          "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+          "line": 88,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should navigate to the Mystery category page when the sidebar link is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2190,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:23.131Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-9b33b-the-sidebar-link-is-clicked-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-62c6a3d0d9036ba52979",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 96,
+              "column": 7
+            },
+            {
+              "title": "should have exactly one exact-text \"Mystery\" sidebar link that resolves to the correct category",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1696,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:108:25",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                          "column": 25,
+                          "line": 108
+                        },
+                        "snippet": "  106 |     await categoryPage.clickSidebarMysteryLink();\n  107 |     const headingText = (await categoryPage.heading().textContent())?.trim();\n> 108 |     expect(headingText).toBe(TEST_DATA.categoryName);\n      |                         ^\n  109 |     expect(TEST_DATA.distractorCategories).not.toContain(headingText);\n  110 |   });\n  111 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                            "column": 25,
+                            "line": 108
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\n\n  106 |     await categoryPage.clickSidebarMysteryLink();\n  107 |     const headingText = (await categoryPage.heading().textContent())?.trim();\n> 108 |     expect(headingText).toBe(TEST_DATA.categoryName);\n      |                         ^\n  109 |     expect(TEST_DATA.distractorCategories).not.toContain(headingText);\n  110 |   });\n  111 |\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:108:25"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:25.450Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-b800d-ves-to-the-correct-category-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-b800d-ves-to-the-correct-category-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                        "column": 25,
+                        "line": 108
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-e3970b149883cd0dbf94",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 103,
+              "column": 7
+            },
+            {
+              "title": "should reach the Mystery category page from a non-homepage page that renders the sidebar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1312,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:27.551Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-53a8a-ge-that-renders-the-sidebar-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-6b460555a2398edaa039",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 113,
+              "column": 7
+            },
+            {
+              "title": "should display a heading equal to \"Mystery\" on the category page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6585,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:122:42",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                          "column": 42,
+                          "line": 122
+                        },
+                        "snippet": "  120 |   test('should display a heading equal to \"Mystery\" on the category page', async ({ page }) => {\n  121 |     await categoryPage.navigateTo(TEST_DATA.mysteryUrl);\n> 122 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  123 |   });\n  124 |\n  125 |   // TC-005-F :: Heading is an exact match only, never padded or conflated with another category  [FR-02]"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                            "column": 42,
+                            "line": 122
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n\n  120 |   test('should display a heading equal to \"Mystery\" on the category page', async ({ page }) => {\n  121 |     await categoryPage.navigateTo(TEST_DATA.mysteryUrl);\n> 122 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  123 |   });\n  124 |\n  125 |   // TC-005-F :: Heading is an exact match only, never padded or conflated with another category  [FR-02]\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:122:42"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:28.987Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-f56fc-ystery-on-the-category-page-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-f56fc-ystery-on-the-category-page-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                        "column": 42,
+                        "line": 122
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-3d172feee797dac4c1cd",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "should not display a heading conflated with another category or padded with extra text",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1564,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:132:33",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                          "column": 33,
+                          "line": 132
+                        },
+                        "snippet": "  130 |       expect(headingText).not.toBe(malformed);\n  131 |     }\n> 132 |     expect(headingText?.trim()).toBe(TEST_DATA.categoryName);\n      |                                 ^\n  133 |   });\n  134 |\n  135 |   // TC-006-P :: All displayed books belong to the Mystery category  [FR-03]"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                            "column": 33,
+                            "line": 132
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\n\n  130 |       expect(headingText).not.toBe(malformed);\n  131 |     }\n> 132 |     expect(headingText?.trim()).toBe(TEST_DATA.categoryName);\n      |                                 ^\n  133 |   });\n  134 |\n  135 |   // TC-006-P :: All displayed books belong to the Mystery category  [FR-03]\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:132:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:35.980Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-94745-y-or-padded-with-extra-text-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-94745-y-or-padded-with-extra-text-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                        "column": 33,
+                        "line": 132
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-09368d99875d59baff04",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 126,
+              "column": 7
+            },
+            {
+              "title": "should confirm the first listing belongs to Mystery via its own product-page breadcrumb",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1499,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:38.051Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-e369a-own-product-page-breadcrumb-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-1796fc772fe29d57935a",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "should render without error when the category returns zero results",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 96,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:39.675Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-4fcac-tegory-returns-zero-results-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-05c17f1695508ed9ed3e",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 143,
+              "column": 7
+            },
+            {
+              "title": "should keep the Mystery filter and heading intact when paginating to the next page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6476,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:157:42",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                          "column": 42,
+                          "line": 157
+                        },
+                        "snippet": "  155 |     await categoryPage.clickNextLink();\n  156 |     await expect(page).toHaveURL(TEST_DATA.mysteryUrlPattern);\n> 157 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  158 |     await expect(categoryPage.nextLink()).toHaveCount(0);\n  159 |   });\n  160 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                            "column": 42,
+                            "line": 157
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n\n  155 |     await categoryPage.clickNextLink();\n  156 |     await expect(page).toHaveURL(TEST_DATA.mysteryUrlPattern);\n> 157 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  158 |     await expect(categoryPage.nextLink()).toHaveCount(0);\n  159 |   });\n  160 |\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:157:42"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:39.780Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-84adc-paginating-to-the-next-page-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-84adc-paginating-to-the-next-page-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                        "column": 42,
+                        "line": 157
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-14e86717e2cfbf64aa66",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 153,
+              "column": 7
+            },
+            {
+              "title": "should show a total result count equal to the sum of listings across both pages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2280,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:46.654Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-d054e--listings-across-both-pages-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-151af07c0b3d196cf2aa",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 162,
+              "column": 7
+            },
+            {
+              "title": "should show a final-page item count matching the remainder of the total, with no further pagination",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1832,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:49.059Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-630c6--with-no-further-pagination-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-36b98a04ba7620310a15",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 176,
+              "column": 7
+            },
+            {
+              "title": "should show a non-empty title, formatted price, and in-stock availability on the first listing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1148,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:50.900Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-34987-bility-on-the-first-listing-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-e7372861f5cc76e2b1dd",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 191,
+              "column": 7
+            },
+            {
+              "title": "should not have any listing with an empty title, malformed price, or missing availability text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:52.055Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-cae92-r-missing-availability-text-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-eb4bbe1838a71f70e331",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 200,
+              "column": 7
+            },
+            {
+              "title": "should open a product detail page whose heading matches the clicked listing title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1334,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:53.325Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-389cf-s-the-clicked-listing-title-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-16deff8d9f7a76236e7b",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 218,
+              "column": 7
+            },
+            {
+              "title": "should not navigate to the second listing product page when the first listing is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1335,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:54.666Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-6afc1-he-first-listing-is-clicked-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-673e5671c153bba3be33",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 227,
+              "column": 7
+            },
+            {
+              "title": "should render the correct heading and item count when navigating directly to the Mystery URL",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6162,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:241:42",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                          "column": 42,
+                          "line": 241
+                        },
+                        "snippet": "  239 |   test('should render the correct heading and item count when navigating directly to the Mystery URL', async ({ page }) => {\n  240 |     await categoryPage.navigateTo(TEST_DATA.mysteryUrl);\n> 241 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  242 |     await expect(categoryPage.bookItems().first()).toBeVisible();\n  243 |     const totalText = await categoryPage.resultsCount().textContent();\n  244 |     expect(Number(totalText?.trim())).toBeGreaterThan(0);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                            "column": 42,
+                            "line": 241
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n\n  239 |   test('should render the correct heading and item count when navigating directly to the Mystery URL', async ({ page }) => {\n  240 |     await categoryPage.navigateTo(TEST_DATA.mysteryUrl);\n> 241 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  242 |     await expect(categoryPage.bookItems().first()).toBeVisible();\n  243 |     const totalText = await categoryPage.resultsCount().textContent();\n  244 |     expect(Number(totalText?.trim())).toBeGreaterThan(0);\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:241:42"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:33:56.007Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-1bec7-directly-to-the-Mystery-URL-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-1bec7-directly-to-the-Mystery-URL-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                        "column": 42,
+                        "line": 241
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-5c79c228283d42dd494d",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 239,
+              "column": 7
+            },
+            {
+              "title": "should stay on the same Mystery page with an unchanged item count after repeated filter clicks",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6771,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:254:42",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                          "column": 42,
+                          "line": 254
+                        },
+                        "snippet": "  252 |     await categoryPage.clickSidebarMysteryLink();\n  253 |     await expect(page).toHaveURL(TEST_DATA.mysteryUrlPattern);\n> 254 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  255 |     await expect(categoryPage.bookItems()).toHaveCount(initialCount);\n  256 |\n  257 |     await categoryPage.clickSidebarMysteryLink();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                            "column": 42,
+                            "line": 254
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.page-header.action h1')\nExpected: \u001b[32m\"Mystery\"\u001b[39m\nReceived: \u001b[31m\"ERROR\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.page-header.action h1')\u001b[22m\n\u001b[2m    9 × locator resolved to <h1>ERROR</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ERROR\"\u001b[22m\n\n\n  252 |     await categoryPage.clickSidebarMysteryLink();\n  253 |     await expect(page).toHaveURL(TEST_DATA.mysteryUrlPattern);\n> 254 |     await expect(categoryPage.heading()).toHaveText(TEST_DATA.categoryName);\n      |                                          ^\n  255 |     await expect(categoryPage.bookItems()).toHaveCount(initialCount);\n  256 |\n  257 |     await categoryPage.clickSidebarMysteryLink();\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts:254:42"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-02T15:34:02.570Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-ae389-fter-repeated-filter-clicks-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/httpbookstoscrapecom-filte-ae389-fter-repeated-filter-clicks-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+                        "column": 42,
+                        "line": 254
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5e41ea626eb442d0a332-45fda69dd7466ee9c6f9",
+              "file": "httpbookstoscrapecom-filter-books-by-the-fault.spec.ts",
+              "line": 248,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-02T15:33:22.752Z",
+    "duration": 46748.591,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

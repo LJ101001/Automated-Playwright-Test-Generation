@@ -1,0 +1,328 @@
+
+============================================================
+  req4 baseline-only completion run
+  Requirement  : http://books.toscrape.com — add a book to the basket from the product page
+  Feature name : httpbookstoscrapecom-add-a-book-to-the-b
+============================================================
+
+
+[single-agent] Run 1/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — add a book to the basket from the product page
+  Feature name: httpbookstoscrapecom-add-a-book-to-the-b
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+Ignoring 4 permissions.allow entries from .claude/settings.local.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects["/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester"].hasTrustDialogAccepted: true in /Users/lewiswaton/.claude.json.
+I need to flag something before writing tests. I visited the live site and confirmed:
+
+- **Individual product pages** (e.g. `/catalogue/tipping-the-velvet_999/index.html`) have **no "Add to basket" button for the book being viewed**. The `<form>`/`<button>Add to basket</button>` elements that exist on that page belong to the "Products you may also like" carousel at the bottom (i.e., they belong to *other* books' quick-add widgets, not the current product).
+- "Add to basket" only exists as a decorative quick-add button on **listing/grid pages** (homepage, category pages) — one per book pod.
+- It's non-functional everywhere: clicking it submits an empty `<form>` with no `action`, which just reloads the same page with a trailing `?` in the URL. There's no cart page, no cart counter, no confirmation message anywhere on the site.
+- The site literally displays a banner: *"This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no real meaning."*
+
+So the literal requirement — **"add a book to the basket from the product page"** — describes a feature that does not exist on books.toscrape.com. There is no add-to-basket control on the product detail page itself.
+
+How would you like me to proceed?
+1. **Test the closest real analog**: the quick-add "Add to basket" button on the homepage/category grid (clearly noting in the report this isn't literally the product detail page), verifying it's present/enabled and that clicking it doesn't break the page.
+2. **Document the absence as the finding**: write tests that assert the product page has no add-to-basket control (a genuine gap discovered on the live site), which is itself valid fault-detection data for your dissertation.
+3. **Pick a different feature/site** for this baseline run, since this one doesn't map to a real flow.
+
+I don't want to fabricate selectors for a feature that isn't there — that would produce a misleading baseline result. Let me know which direction you'd like.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-add-a-book-to-the-b
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md
+==================================================
+  WARNING: spec file not found: tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+  Result: passed=0 failed=0
+
+[single-agent] Run 2/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — add a book to the basket from the product page
+  Feature name: httpbookstoscrapecom-add-a-book-to-the-b
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+Ignoring 4 permissions.allow entries from .claude/settings.local.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects["/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester"].hasTrustDialogAccepted: true in /Users/lewiswaton/.claude.json.
+All done. Summary:
+
+- **Discovered live behaviour independently** (WebFetch + Playwright diagnostics): confirmed the books.toscrape.com product detail page has zero `<button>`/`<form>` elements — no native add-to-basket control exists there. The only functional add-to-basket control lives on the catalogue listing tile as a no-op GET-reload form.
+- **Wrote** `tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts` — single POM class, `TEST_DATA` constant, 8 tests (4 positive/4 negative) with `TC-NNN-P|F :: ... [FR-NN]` annotations, no `waitForTimeout`.
+- **Ran the suite**: 8/8 passed on the first attempt (100% success rate, 17.6s), no fix iterations needed.
+- **Wrote** `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md` with the full results table and an analysis noting the single-agent approach folds requirement-feasibility judgment into the spec's header comment rather than surfacing it as a separate artefact.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-add-a-book-to-the-b
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 3/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — add a book to the basket from the product page
+  Feature name: httpbookstoscrapecom-add-a-book-to-the-b
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+Ignoring 4 permissions.allow entries from .claude/settings.local.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects["/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester"].hasTrustDialogAccepted: true in /Users/lewiswaton/.claude.json.
+I found something important before writing anything: **this exact task appears to have already been run twice today** for this same feature.
+
+- `tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts` (11:10) and a `-run2.spec.ts` (11:12) already exist, both with the identical finding I independently just confirmed: the books.toscrape.com product detail page has **no add-to-basket button/form at all** — the only functional (and non-functional/no-op) "Add to basket" control lives on the catalogue listing tile, and there's no real cart/basket backend on the site (`/basket`, `/cart` → 404).
+- There's already a `BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md` report (8/8 tests passed) matching the base file.
+- `docs/evaluation/ANALYSIS.md` shows the dissertation dataset currently has 15 runs per condition across 3 *other* features (browse-all-books, filter-books-by-the, view-a-book-detail-, each with run1–run5) — this "add-a-book" feature isn't in that aggregate yet and only has 2 runs so far, not the full 5.
+
+Since there's no git repo here (no undo), I don't want to silently overwrite run1/run2 data. Two ways I could go:
+
+1. **Treat this as generating run3** (matching the run1→run5 pattern used for the other three features) — write `baseline-...-add-a-book-to-the-b-run3.spec.ts`, run it, and produce a run3 test-results file, leaving run1/run2 untouched.
+2. **Overwrite the base file** at the literal unsuffixed path the instructions give, if you actually want to regenerate/replace run1.
+
+Which do you want — new run3, or intentionally overwrite the existing base file?
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-add-a-book-to-the-b
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 4/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — add a book to the basket from the product page
+  Feature name: httpbookstoscrapecom-add-a-book-to-the-b
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+Ignoring 4 permissions.allow entries from .claude/settings.local.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects["/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester"].hasTrustDialogAccepted: true in /Users/lewiswaton/.claude.json.
+This exact feature/spec already has a full baseline history: `tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts` (+ `-run2`, `-run3`) plus matching `pw-report-baseline-...-run1/2/3.json` and a `BASELINE_EVAL_...md` report — this pipeline was already run 3 times for baseline (vs. 5 for multi-agent). 
+
+If I follow the task literally, writing to the un-suffixed path would overwrite run1's spec and its evaluation report — real experimental data. Given the project's own convention (independent generations saved as `-run2`, `-run3`, etc.) and that multi-agent already has 5 runs vs. baseline's 3, should I:
+
+1. Save this as a new **run4** (matching the existing convention, working toward parity with the 5 multi-agent runs), or
+2. Overwrite the existing baseline (run1) files as the instructions literally specify?
+
+I'd lean toward (1) to avoid clobbering prior research data, but want to confirm before touching anything.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-add-a-book-to-the-b
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 5/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — add a book to the basket from the product page
+  Feature name: httpbookstoscrapecom-add-a-book-to-the-b
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+Ignoring 4 permissions.allow entries from .claude/settings.local.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects["/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester"].hasTrustDialogAccepted: true in /Users/lewiswaton/.claude.json.
+All 4 steps complete. Summary:
+
+**Discovery**: books.toscrape.com's product detail page has no "Add to basket" control for the book being viewed — that control only exists on catalogue listing tiles (`article.product_pod`), implemented as a no-op `<form>` (GET to self, no confirmation, no cart page). Confirmed via WebFetch + a Playwright diagnostic script.
+
+**Spec**: `tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts` — Page Object Model (`BooksToScrapePage`), `TEST_DATA` constant, top-level `test.use()`, 3 positive + 3 negative tests, each tagged `TC-NNN-P/F :: intent [FR-NN]`.
+
+**Run**: all 6 tests passed on the first attempt (10.3s total) — no iteration needed.
+
+**Report**: `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md` — 100% success rate, with TC-005-F explicitly documenting the requirement/reality gap as a negative-case finding.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-add-a-book-to-the-b
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-add-a-book-to-the-b.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+  Result: passed=6 failed=0
+
+============================================================
+  Measuring FR coverage...
+============================================================
+
+[multi-agent] FR Coverage for: httpbookstoscrapecom-add-a-book-to-the-b
+  Total FRs in spec : 9
+  FRs in spec       : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08, FR-09
+  FRs in TCs        : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08, FR-09
+  FRs covered       : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08, FR-09
+  Coverage          : 9/9 = 100.0%
+Updated 5 result entries with fr_coverage=1.0000
+
+No post-hoc functional spec found — invoking business-analyst agent...
+  Invoking BA agent...
+Ignoring 4 permissions.allow entries from .claude/settings.local.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects["/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester"].hasTrustDialogAccepted: true in /Users/lewiswaton/.claude.json.
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_BASELINE_httpbookstoscrapecom-add-a-book-to-the-b.md. @developer and @tester please proceed.
+
+The spec derives 8 FRs and 24 test scenarios (3 per FR: positive/negative/boundary) directly from the raw requirement, with no upstream user story and no live-site verification pass — consistent with the single-pass baseline condition. It assumes standard Django-Oscar "add to basket" UX conventions (confirmation message, basket counter, quantity field) and explicitly flags in Dependencies/Environment that any mismatch with the real site's behavior will only surface during implementation/execution, since this baseline has no dedicated developer-verification stage to catch it beforehand — unlike the multi-agent pipeline's equivalent artifact.
+
+[single-agent] FR Coverage for: httpbookstoscrapecom-add-a-book-to-the-b
+  Total FRs in post-hoc spec : 8
+  FRs in post-hoc spec       : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08
+  FR refs in baseline spec   : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06
+  FRs covered                : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06
+  Coverage                   : 6/8 = 75.0%
+Updated 5 result entries with fr_coverage=0.7500
+
+============================================================
+  Measuring fault detection capacity...
+============================================================
+
+============================================================
+  Fault Detection Measurement
+  Feature  : httpbookstoscrapecom-add-a-book-to-the-b
+  Multi-agent spec  : tests/playwright/httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+  Baseline spec     : tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b.spec.ts
+============================================================
+
+Created fault spec: tests/playwright/httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts
+Created fault spec: tests/playwright/baseline-httpbookstoscrapecom-add-a-book-to-the-b-fault.spec.ts
+Starting fault server (all 5 faults active)...
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (5):
+  [FAULT_01] Swap the price of the first two books on the homepage
+  [FAULT_02] Change all "In stock" text to "Out of stock"
+  [FAULT_03] Remove all star-rating elements
+  [FAULT_04] Break the "next" pagination link (href="#")
+  [FAULT_05] Change category page h1 title to "ERROR"
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+Fault server ready.
+
+--- Running clean (no-fault) comparison ---
+scripts/measure-fault-detection.sh: line 137: 55347 Terminated: 15          FAULT_01=true FAULT_02=true FAULT_03=true FAULT_04=true FAULT_05=true node scripts/seed-faults.js
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults: NONE (pass-through mode)
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  Clean multi-agent  : passed=12 failed=0
+  Clean single-agent : passed=5  failed=1
+scripts/measure-fault-detection.sh: line 155: 55394 Terminated: 15          node scripts/seed-faults.js
+
+--- Testing FAULT_01 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_01] Swap the price of the first two books on the homepage
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=12 failed=0  → fault detected: 0
+  single-agent : passed=4 failed=2  → fault detected: 1
+scripts/measure-fault-detection.sh: line 163: 55661 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_02 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_02] Change all "In stock" text to "Out of stock"
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=12 failed=0  → fault detected: 0
+  single-agent : passed=3 failed=3  → fault detected: 1
+scripts/measure-fault-detection.sh: line 163: 56133 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_03 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_03] Remove all star-rating elements
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=12 failed=0  → fault detected: 0
+  single-agent : passed=5 failed=1  → fault detected: 0
+scripts/measure-fault-detection.sh: line 163: 56485 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_04 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_04] Break the "next" pagination link (href="#")
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=12 failed=0  → fault detected: 0
+  single-agent : passed=5 failed=1  → fault detected: 0
+scripts/measure-fault-detection.sh: line 163: 56754 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_05 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_05] Change category page h1 title to "ERROR"
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=12 failed=0  → fault detected: 0
+  single-agent : passed=5 failed=1  → fault detected: 0
+scripts/measure-fault-detection.sh: line 163: 57047 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+============================================================
+  Fault Detection Results for: httpbookstoscrapecom-add-a-book-to-the-b
+  Faults tested             : 5
+  multi-agent  detected     : 0 / 5
+  single-agent detected     : 2  / 5
+============================================================
+Updated multi-agent entries: 5
+Updated single-agent entries: 5
+Results appended to docs/evaluation/results.json
+Stopping fault server (PID 57047)...
+
+============================================================
+  Regenerating ANALYSIS.md...
+============================================================
+
+Analysis written to: /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/docs/evaluation/ANALYSIS.md
+
+=== Quick Summary ===
+success_rate: multi=NaN  single=NaN
+fr_coverage: multi=1.000  single=0.750
+fault_detection_capacity: multi=0.000  single=2.000
+
+============================================================
+  Done. req4 baseline completion finished.
+============================================================

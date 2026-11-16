@@ -1,0 +1,499 @@
+{
+  "config": {
+    "configFile": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/playwright.config.ts",
+    "rootDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+      "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Book detail page — title, price and availability",
+          "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+          "line": 79,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-001-P shows the correct book title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2039,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:34:56.840Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-8d79b-hows-the-correct-book-title-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-fae364ba601ad67bda48",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 81,
+              "column": 7
+            },
+            {
+              "title": "TC-002-P shows the correct price",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1606,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:34:59.008Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-2b504-2-P-shows-the-correct-price-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-45cf911a6dcd30bd922e",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "TC-003-P shows the correct availability status",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6406,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.product_main p.instock.availability')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 6\u001b[39m\n\n\u001b[32m- \u001b[7mIn\u001b[27m stock (22 available)\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[7m        Out of\u001b[27m stock (22 available)\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.product_main p.instock.availability')\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"instock availability\">…</p>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m        Out of stock (22 available)\u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.product_main p.instock.availability')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 6\u001b[39m\n\n\u001b[32m- \u001b[7mIn\u001b[27m stock (22 available)\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[7m        Out of\u001b[27m stock (22 available)\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.product_main p.instock.availability')\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"instock availability\">…</p>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m        Out of stock (22 available)\u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts:104:39",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+                          "column": 39,
+                          "line": 104
+                        },
+                        "snippet": "  102 |\n  103 |     await expect(detail.availability).toBeVisible();\n> 104 |     await expect(detail.availability).toContainText(TEST_DATA.primaryBook.availability);\n      |                                       ^\n  105 |   });\n  106 |\n  107 |   // TC-004-P :: title, price and availability are consistent across a different book record [FR-01][FR-02][FR-04]"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+                            "column": 39,
+                            "line": 104
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div.product_main p.instock.availability')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 6\u001b[39m\n\n\u001b[32m- \u001b[7mIn\u001b[27m stock (22 available)\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[7m        Out of\u001b[27m stock (22 available)\u001b[39m\n\u001b[31m+ \u001b[43m    \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div.product_main p.instock.availability')\u001b[22m\n\u001b[2m    9 × locator resolved to <p class=\"instock availability\">…</p>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m        Out of stock (22 available)\u001b[22m\n\u001b[2m    \u001b[22m\n\u001b[2m\"\u001b[22m\n\n\n  102 |\n  103 |     await expect(detail.availability).toBeVisible();\n> 104 |     await expect(detail.availability).toContainText(TEST_DATA.primaryBook.availability);\n      |                                       ^\n  105 |   });\n  106 |\n  107 |   // TC-004-P :: title, price and availability are consistent across a different book record [FR-01][FR-02][FR-04]\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts:104:39"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:00.619Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-3e83e-correct-availability-status-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-3e83e-correct-availability-status-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+                        "column": 39,
+                        "line": 104
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-9d7505ad5d8040168b20",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 99,
+              "column": 7
+            },
+            {
+              "title": "TC-004-P shows correct, distinct data for a second book",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1195,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:07.426Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-005d6-inct-data-for-a-second-book-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-4086af32a4c813718d14",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 108,
+              "column": 7
+            },
+            {
+              "title": "TC-005-P navigates from the homepage to the correct detail page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1289,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:08.753Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-818c2--to-the-correct-detail-page-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-4729db870ebf4ac4a145",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 118,
+              "column": 7
+            },
+            {
+              "title": "TC-006-P keeps the info table consistent with the summary panel",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5979,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table.table.table-striped').locator('tr').filter({ has: locator('th:text-is(\"Availability\")') }).locator('td')\nExpected substring: \u001b[32m\"\u001b[7mIn\u001b[27m stock (22 available)\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mOut of\u001b[27m stock (22 available)\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('table.table.table-striped').locator('tr').filter({ has: locator('th:text-is(\"Availability\")') }).locator('td')\u001b[22m\n\u001b[2m    9 × locator resolved to <td>Out of stock (22 available)</td>\u001b[22m\n\u001b[2m      - unexpected value \"Out of stock (22 available)\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table.table.table-striped').locator('tr').filter({ has: locator('th:text-is(\"Availability\")') }).locator('td')\nExpected substring: \u001b[32m\"\u001b[7mIn\u001b[27m stock (22 available)\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mOut of\u001b[27m stock (22 available)\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('table.table.table-striped').locator('tr').filter({ has: locator('th:text-is(\"Availability\")') }).locator('td')\u001b[22m\n\u001b[2m    9 × locator resolved to <td>Out of stock (22 available)</td>\u001b[22m\n\u001b[2m      - unexpected value \"Out of stock (22 available)\"\u001b[22m\n\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts:137:55",
+                        "location": {
+                          "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+                          "column": 55,
+                          "line": 137
+                        },
+                        "snippet": "  135 |     await expect(detail.infoRowValue('UPC')).toHaveText(TEST_DATA.primaryBook.upc);\n  136 |     await expect(detail.infoRowValue('Price (incl. tax)')).toHaveText(TEST_DATA.primaryBook.price);\n> 137 |     await expect(detail.infoRowValue('Availability')).toContainText(TEST_DATA.primaryBook.availability);\n      |                                                       ^\n  138 |   });\n  139 |\n  140 |   // TC-007-F :: a non-existent book URL returns 404 and renders no product content [FR-07]"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+                            "column": 55,
+                            "line": 137
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table.table.table-striped').locator('tr').filter({ has: locator('th:text-is(\"Availability\")') }).locator('td')\nExpected substring: \u001b[32m\"\u001b[7mIn\u001b[27m stock (22 available)\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mOut of\u001b[27m stock (22 available)\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('table.table.table-striped').locator('tr').filter({ has: locator('th:text-is(\"Availability\")') }).locator('td')\u001b[22m\n\u001b[2m    9 × locator resolved to <td>Out of stock (22 available)</td>\u001b[22m\n\u001b[2m      - unexpected value \"Out of stock (22 available)\"\u001b[22m\n\n\n  135 |     await expect(detail.infoRowValue('UPC')).toHaveText(TEST_DATA.primaryBook.upc);\n  136 |     await expect(detail.infoRowValue('Price (incl. tax)')).toHaveText(TEST_DATA.primaryBook.price);\n> 137 |     await expect(detail.infoRowValue('Availability')).toContainText(TEST_DATA.primaryBook.availability);\n      |                                                       ^\n  138 |   });\n  139 |\n  140 |   // TC-007-F :: a non-existent book URL returns 404 and renders no product content [FR-07]\n    at /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts:137:55"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:10.049Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-a62c7-tent-with-the-summary-panel-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-a62c7-tent-with-the-summary-panel-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/tests/playwright/baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+                        "column": 55,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-db042b3ddc2f9c6f6bb3",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 131,
+              "column": 7
+            },
+            {
+              "title": "TC-007-F returns 404 for a non-existent book URL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 348,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:16.432Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-58b1a-for-a-non-existent-book-URL-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-398575c82946466f6f9a",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "TC-008-F returns 404 for a malformed catalogue path",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 228,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:16.910Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-0b2fc--a-malformed-catalogue-path-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-11562984e51cfed51af4",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 151,
+              "column": 7
+            },
+            {
+              "title": "TC-009-F breadcrumb active item is the book title, not an ancestor crumb",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1155,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-03T08:35:17.145Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/test-results/baseline-httpbookstoscrape-4f761-title-not-an-ancestor-crumb-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0cd8b71e92307c6d86da-6ef5c0525ec86b20d745",
+              "file": "baseline-httpbookstoscrapecom-view-a-book-detail--fault.spec.ts",
+              "line": 160,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-03T08:34:56.450Z",
+    "duration": 21891.017,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,585 @@
+
+============================================================
+  Single-Requirement Evaluation Runner
+  Requirement  : http://books.toscrape.com — navigate to the next page of results
+  Feature name : httpbookstoscrapecom-navigate-to-the-nex
+  Runs/condition: 5
+============================================================
+
+
+[multi-agent] Run 1/5
+
+==================================================
+  Multi-Agent Test Generation Pipeline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/5] Product Owner — interpreting requirement...
+Requirement interpretation complete. Saved to docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md. @business-analyst please proceed.
+
+  → Wrote docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[2/5] Business Analyst — writing functional spec...
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md. @developer and @tester please proceed.
+
+  → Wrote docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[3/5] Developer — writing implementation summary...
+Implementation summary complete. Saved to `docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md`. @tester please generate test cases and Playwright scripts.
+
+Key findings from live verification: page 51 returns a clean HTTP 404 (not a blank grid), the last-page boundary is confirmed exactly at page 50 (`li.next` absent), and two quirks testers need to know — book titles must be compared via the `title` attribute (not truncated visible text), and the page indicator's raw text needs trimming before regex matching.
+
+  → Wrote docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[4/5] Tester — generating test cases and Playwright script...
+All 20 tests pass on the first run.
+
+Test generation complete. docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md — 20 test cases. tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts — 20 tests (13 positive, 7 negative). @evaluator please run the tests and produce the evaluation report.
+
+  → Wrote docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+  → Wrote tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+
+[5/5] Evaluator — running tests and producing report...
+Evaluation complete. `docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md`. Key metrics: Success rate 100% | FR coverage 100% | Fault detection 100%.
+
+==================================================
+  Pipeline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+    tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+==================================================
+  Running spec: tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=20 failed=0
+
+[multi-agent] Run 2/5
+
+==================================================
+  Multi-Agent Test Generation Pipeline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/5] Product Owner — interpreting requirement...
+This user story already exists and looks complete and well-formed for this exact feature (matches the requirement verbatim). I'll keep it as-is rather than rewriting redundantly.
+
+Requirement interpretation complete. Saved to docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md. @business-analyst please proceed.
+
+  → Wrote docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[2/5] Business Analyst — writing functional spec...
+A functional spec for this feature already exists at that path and is complete, well-formed, and matches the user story (8 FRs, 24 test scenarios, UI elements, test data, dependencies). No changes are needed — it already satisfies all the required rules.
+
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md. @developer and @tester please proceed.
+
+  → Wrote docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[3/5] Developer — writing implementation summary...
+Verified the live site matches the existing IMPL_SUMMARY exactly: page 1 returns 200 with `li.next > a` href `catalogue/page-2.html`, page 50 has no `li.next` (empty grep result), and page 51 returns a clean 404. The existing `docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md` is accurate and complete against the current live site.
+
+Implementation summary confirmed accurate. Saved to docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md. @tester please generate test cases and Playwright scripts.
+
+  → Wrote docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[4/5] Tester — generating test cases and Playwright script...
+All 20 tests pass against the live site.
+
+Test generation complete. docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md — 20 test cases. tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts — 20 tests (11 positive, 9 negative/boundary). @evaluator please run the tests and produce the evaluation report.
+
+  → Wrote docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+  → Wrote tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+
+[5/5] Evaluator — running tests and producing report...
+Evaluation complete. docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md. Key metrics: Success rate 100% | FR coverage 100% | Fault detection 100%.
+
+==================================================
+  Pipeline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+    tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+==================================================
+  Running spec: tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=20 failed=0
+
+[multi-agent] Run 3/5
+
+==================================================
+  Multi-Agent Test Generation Pipeline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/5] Product Owner — interpreting requirement...
+This user story already exists and is well-formed, matching the required structure. Since a pipeline run for this exact feature is being requested again, I'll leave it as-is since it already fully satisfies the requirement.
+
+Requirement interpretation complete. Saved to docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md. @business-analyst please proceed.
+
+  → Wrote docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[2/5] Business Analyst — writing functional spec...
+FR-01 now has one of each type (Positive: TS-01, Boundary: TS-02, Negative: TS-03), matching the coverage rule already satisfied by every other FR. The rest of the spec was already solid — 8 numbered FRs, 24 test scenarios all citing FRs, a UI element table with concrete `books.toscrape.com` selectors, test data summary, and dependencies/environment notes.
+
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md. @developer and @tester please proceed.
+
+  → Wrote docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[3/5] Developer — writing implementation summary...
+All claims in the existing IMPL_SUMMARY are confirmed accurate against the live site — pagination markup, hrefs, page count, and the page-51 404 behavior all match exactly. The file is already complete and correct, so no changes are needed.
+
+Implementation summary complete. Saved to docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md. @tester please generate test cases and Playwright scripts.
+
+  → Wrote docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[4/5] Tester — generating test cases and Playwright script...
+All 24 tests pass.
+
+Test generation complete. docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md — 24 test cases. tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts — 24 tests (16 positive, 8 negative). @evaluator please run the tests and produce the evaluation report.
+
+  → Wrote docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+  → Wrote tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+
+[5/5] Evaluator — running tests and producing report...
+Evaluation complete. docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md. Key metrics: Success rate 100% | FR coverage 100% | Fault detection 100%.
+
+==================================================
+  Pipeline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+    tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+==================================================
+  Running spec: tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=24 failed=0
+
+[multi-agent] Run 4/5
+
+==================================================
+  Multi-Agent Test Generation Pipeline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/5] Product Owner — interpreting requirement...
+This user story already exists and is well-formed, matching the required structure exactly. No changes are needed.
+
+Requirement interpretation complete. Saved to docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md. @business-analyst please proceed.
+
+  → Wrote docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[2/5] Business Analyst — writing functional spec...
+The functional specification already exists at `docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md` and is complete — it covers all 6 acceptance-criteria scenarios plus edge cases from the user story across 8 functional requirements (FR-01 through FR-08) and 24 test scenarios, each properly citing an FR with positive/negative/boundary coverage.
+
+No changes were needed since the file already matches the required format and fully derives from the user story.
+
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md. @developer and @tester please proceed.
+
+  → Wrote docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[3/5] Developer — writing implementation summary...
+All the claims in the existing IMPL_SUMMARY check out against the live site — page 1/50 return 200, page 51 returns 404, and page 50's pager confirms `li.next` is absent while `li.previous` and `li.current` ("Page 50 of 50") are present, matching the file exactly.
+
+The `docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md` file already exists and is accurate and complete — I independently re-verified its key claims (page 1/2/49/50 return HTTP 200, page 51 returns HTTP 404, page 50's `ul.pager` contains only `li.previous` and `li.current` with no `li.next`) against the live site and they match.
+
+Implementation summary complete. Saved to docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md. @tester please generate test cases and Playwright scripts.
+
+  → Wrote docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[4/5] Tester — generating test cases and Playwright script...
+All 24 tests already exist for this feature, correctly implement all 8 FRs, and pass in full (24/24) against the live site.
+
+Test generation complete. docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md — 24 test cases. tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts — 24 tests (13 positive, 11 negative/boundary). @evaluator please run the tests and produce the evaluation report.
+
+  → Wrote docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+  → Wrote tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+
+[5/5] Evaluator — running tests and producing report...
+The report is complete and saved.
+
+Evaluation complete. docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md. Key metrics: Success rate 95.83% (23/24) | FR coverage 100% (8/8) | Fault detection 100% (9/9).
+
+Note: the one failure (TC-012-P) is a boundary/positive test hitting a race condition in the test script (`.count()` sampled before page-50 render completed, not an auto-retrying assertion) — not a site defect and not one of the 9 fault-detection cases. Details and a recommended fix are in Section 5 of the report.
+
+==================================================
+  Pipeline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+    tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+==================================================
+  Running spec: tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=24 failed=0
+
+[multi-agent] Run 5/5
+
+==================================================
+  Multi-Agent Test Generation Pipeline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/5] Product Owner — interpreting requirement...
+Requirement interpretation complete. Saved to docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md. @business-analyst please proceed.
+
+  → Wrote docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[2/5] Business Analyst — writing functional spec...
+The functional specification already exists at that path and fully satisfies the required format — 8 numbered FRs (FR-01 through FR-08, covering visibility, click-navigation, distinct book sets, multi-page sequencing, final-page absence, page indicator, out-of-range boundary, and browser back), a UI elements table with specific class-based selectors (`article.product_pod`, `li.next > a`, `li.previous > a`, `.pager .current`), and 24 test scenarios (TS-01–TS-24) each citing an FR, with at least one Positive, Negative, and Boundary scenario per FR. No further changes were needed.
+
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md. @developer and @tester please proceed.
+
+  → Wrote docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[3/5] Developer — writing implementation summary...
+An `IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md` already exists and its content matches everything I independently confirmed against the live site (pagination markup, `li.next`/`li.previous`/`li.current` selectors, page 1 vs page 50 counts of 20, the page-51 HTTP 404, title-attribute truncation quirk, and pager whitespace). No discrepancies found, so I left it as-is rather than overwrite it with a duplicate.
+
+Implementation summary complete. Saved to docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md. @tester please generate test cases and Playwright scripts.
+
+  → Wrote docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+
+[4/5] Tester — generating test cases and Playwright script...
+All 24 tests pass. Both output files are already in place and validated.
+
+Test generation complete. docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md — 24 test cases. tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts — 24 tests (14 positive, 10 negative/boundary). @evaluator please run the tests and produce the evaluation report.
+
+  → Wrote docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+  → Wrote tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+
+[5/5] Evaluator — running tests and producing report...
+Evaluation complete. `docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md`. Key metrics: Success rate 95.83% (23/24, with a documented flaky race-condition in TC-012-P — not a product defect) | FR coverage 100% | Fault detection 100%.
+
+I reconciled two runs performed this session: the first reproduced the pre-existing report's exact failure (TC-012-P at spec.ts:206), the second passed 24/24 clean with no code changes — corroborating that the existing report's race-condition root-cause analysis is correct, so I added that corroboration rather than overwrite its analysis.
+
+==================================================
+  Pipeline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    docs/specs/USER_STORY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/FUNCTIONAL_SPEC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/specs/IMPL_SUMMARY_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/test-cases/TC_httpbookstoscrapecom-navigate-to-the-nex.md
+    docs/evaluation/EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+    tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+==================================================
+  Running spec: tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=24 failed=0
+
+[single-agent] Run 1/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+Done. Summary:
+
+- **Spec**: `tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts` — 8 tests (5 positive, 3 negative) covering next/previous navigation, content change verification, and boundary conditions (no next on last page, no previous on first page, 404 beyond page 50).
+- **Fix applied**: one iteration needed — the "previous" link from page 2 goes to `/catalogue/page-1.html`, not `/index.html` as initially assumed.
+- **Result**: 8/8 passing, 100% success rate.
+- **Report**: `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md` written with per-test results and a summary of coverage gaps for later multi-agent comparison.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 2/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+All artifacts are in place and verified against the live site.
+
+**Result: 8/8 tests passed (100% success rate), 17.4s duration.**
+
+- Spec: `tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts` — POM-based, `TEST_DATA` constant, 5 positive + 3 negative tests covering forward/backward pagination, content-change verification, and boundary conditions (no "next" on page 50, no "previous" on page 1, 404 on out-of-range page request).
+- Raw run output: `test-results/baseline-httpbookstoscrapecom-navigate-to-the-nex-raw.txt`
+- Evaluation report: `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md`
+
+Note: this exact spec/eval already existed on disk from an earlier pass in this project (matching timestamps from earlier today), and its selectors matched what I independently re-verified against the live site (`ul.pager`, `li.next/li.previous a`, `article.product_pod h3 a`, HTTP 404 for out-of-range pages) — so I re-ran it fresh rather than duplicating the work, confirmed it still passes, and updated the report's duration/timing to reflect this run. One incidental fix along the way: `npx playwright test --reporter=json | tee test-results/...` doesn't work here because Playwright clears its `test-results/` output directory at the start of each run, deleting the file `tee` just opened — I routed output through `/tmp` first and copied it in afterward.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 3/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+All 8 tests pass (100% success rate) after one fix-iteration. Summary:
+
+- **Spec**: `tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts` — 5 positive + 3 negative tests covering page load, next/previous navigation, content change verification, and boundary conditions (last page, first page, out-of-range 404), across 4 FRs.
+- **Bug found & fixed**: initial assertion expected "previous" from page 2 to land on `/index.html`, but the site's actual previous-link href resolves to `/catalogue/page-1.html` — a distinct route with identical content. Fixed by asserting against the correct path.
+- **Archived** the prior run's spec/report as `-run3` files following this project's existing repeated-trials naming convention (run1/run2 already existed from earlier today).
+- **Report**: `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md` updated with results and a summary noting the baseline's gap — no independent verification step caught the routing assumption before test execution did.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 4/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+All artefacts are in place and consistent:
+
+- **Spec**: `tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts` — POM-based, `TEST_DATA` constant, 5 positive + 3 negative tests, FR-tagged TC comments, `test.use()` at top level.
+- **Test run**: 8/8 passed (100%), 15.1s, raw JSON saved to `test-results/baseline-httpbookstoscrapecom-navigate-to-the-nex-raw.txt`.
+- **Evaluation report**: `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md` — already contained an accurate report from an earlier iteration of this same task (including the one genuine fix needed along the way: a Previous-link assertion against `/index.html` vs. the actual resolved `/catalogue/page-1.html` route), consistent with the current passing run, so I left it as-is.
+
+No further action needed — all steps of the pipeline are complete and verified.
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=8 failed=0
+
+[single-agent] Run 5/5
+
+==================================================
+  Single-Agent Test Generation Baseline
+  Requirement : http://books.toscrape.com — navigate to the next page of results
+  Feature name: httpbookstoscrapecom-navigate-to-the-nex
+==================================================
+
+[1/1] Generating Playwright spec and evaluation (single agent)...
+All 8 tests passed on the first run — no fix iterations needed.
+
+**Results**: 8/8 passed (100%), 17.4s total. Spec covers 4 self-assigned FRs (initial load, next-navigation, previous-navigation, boundary/404) with 5 positive and 3 negative tests, using confirmed live selectors (`li.next a`, `li.previous a`, `.pager .current`, `article.product_pod`).
+
+Files written:
+- `tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts`
+- `test-results/baseline-httpbookstoscrapecom-navigate-to-the-nex-raw.txt`
+- `docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md`
+
+==================================================
+  Baseline complete for: httpbookstoscrapecom-navigate-to-the-nex
+
+  Artefacts written:
+    tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+    docs/evaluation/BASELINE_EVAL_httpbookstoscrapecom-navigate-to-the-nex.md
+==================================================
+  Running spec: tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Result: passed=8 failed=0
+
+============================================================
+  Measuring FR coverage...
+============================================================
+
+[multi-agent] FR Coverage for: httpbookstoscrapecom-navigate-to-the-nex
+  Total FRs in spec : 8
+  FRs in spec       : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08
+  FRs in TCs        : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08
+  FRs covered       : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08
+  Coverage          : 8/8 = 100.0%
+Updated 5 result entries with fr_coverage=1.0000
+
+No post-hoc functional spec found — invoking business-analyst agent...
+  Invoking BA agent...
+Functional specification complete. Saved to docs/specs/FUNCTIONAL_SPEC_BASELINE_httpbookstoscrapecom-navigate-to-the-nex.md. @developer and @tester please proceed.
+
+The baseline spec covers 8 FRs (next-control visibility, click navigation, distinct book sets, multi-page sequencing, last-page boundary, page indicator, beyond-last-page handling, browser back/forward) with 24 test scenarios (positive/negative/boundary per FR), sourced directly from the raw requirement since no upstream USER_STORY file exists for this baseline run.
+
+[single-agent] FR Coverage for: httpbookstoscrapecom-navigate-to-the-nex
+  Total FRs in post-hoc spec : 8
+  FRs in post-hoc spec       : FR-01, FR-02, FR-03, FR-04, FR-05, FR-06, FR-07, FR-08
+  FR refs in baseline spec   : FR-01, FR-02, FR-03, FR-04
+  FRs covered                : FR-01, FR-02, FR-03, FR-04
+  Coverage                   : 4/8 = 50.0%
+Updated 5 result entries with fr_coverage=0.5000
+
+============================================================
+  Measuring fault detection capacity...
+============================================================
+
+============================================================
+  Fault Detection Measurement
+  Feature  : httpbookstoscrapecom-navigate-to-the-nex
+  Multi-agent spec  : tests/playwright/httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+  Baseline spec     : tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex.spec.ts
+============================================================
+
+Created fault spec: tests/playwright/httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts
+Created fault spec: tests/playwright/baseline-httpbookstoscrapecom-navigate-to-the-nex-fault.spec.ts
+Starting fault server (all 5 faults active)...
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (5):
+  [FAULT_01] Swap the price of the first two books on the homepage
+  [FAULT_02] Change all "In stock" text to "Out of stock"
+  [FAULT_03] Remove all star-rating elements
+  [FAULT_04] Break the "next" pagination link (href="#")
+  [FAULT_05] Change category page h1 title to "ERROR"
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+Fault server ready.
+
+--- Running clean (no-fault) comparison ---
+scripts/measure-fault-detection.sh: line 137: 70754 Terminated: 15          FAULT_01=true FAULT_02=true FAULT_03=true FAULT_04=true FAULT_05=true node scripts/seed-faults.js
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults: NONE (pass-through mode)
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  Clean multi-agent  : passed=24 failed=0
+  Clean single-agent : passed=8  failed=0
+scripts/measure-fault-detection.sh: line 155: 70771 Terminated: 15          node scripts/seed-faults.js
+
+--- Testing FAULT_01 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_01] Swap the price of the first two books on the homepage
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=24 failed=0  → fault detected: 0
+  single-agent : passed=8 failed=0  → fault detected: 0
+scripts/measure-fault-detection.sh: line 163: 71250 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_02 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_02] Change all "In stock" text to "Out of stock"
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=24 failed=0  → fault detected: 0
+  single-agent : passed=8 failed=0  → fault detected: 0
+scripts/measure-fault-detection.sh: line 163: 71780 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_03 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_03] Remove all star-rating elements
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+  multi-agent  : passed=24 failed=0  → fault detected: 0
+  single-agent : passed=8 failed=0  → fault detected: 0
+scripts/measure-fault-detection.sh: line 163: 72368 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_04 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_04] Break the "next" pagination link (href="#")
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+[proxy error] /media/cache/26/0c/260c6ae16bce31c8f8c95daddd9f4a1c.jpg: getaddrinfo ENOTFOUND books.toscrape.com
+  multi-agent  : passed=11 failed=13  → fault detected: 1
+  single-agent : passed=6 failed=2  → fault detected: 1
+scripts/measure-fault-detection.sh: line 163: 72824 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+--- Testing FAULT_05 in isolation ---
+=== Seeded Fault Mirror Server ===
+Proxying: http://books.toscrape.com → http://localhost:3001
+Active faults (1):
+  [FAULT_05] Change category page h1 title to "ERROR"
+==================================
+
+Fault mirror server listening at http://localhost:3001
+Press Ctrl+C to stop.
+
+[proxy error] /index.html: read ETIMEDOUT
+  multi-agent  : passed=24 failed=0  → fault detected: 0
+  single-agent : passed=7 failed=1  → fault detected: 1
+scripts/measure-fault-detection.sh: line 163: 75511 Terminated: 15          env "${FAULT_VAR}=true" node scripts/seed-faults.js
+
+============================================================
+  Fault Detection Results for: httpbookstoscrapecom-navigate-to-the-nex
+  Faults tested             : 5
+  multi-agent  detected     : 1 / 5
+  single-agent detected     : 2  / 5
+============================================================
+Updated multi-agent entries: 5
+Updated single-agent entries: 5
+Results appended to docs/evaluation/results.json
+Stopping fault server (PID 75511)...
+
+============================================================
+  Regenerating ANALYSIS.md...
+============================================================
+
+Analysis written to: /Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/docs/evaluation/ANALYSIS.md
+
+=== Quick Summary ===
+success_rate: multi=1.000  single=0.960
+fr_coverage: multi=1.000  single=0.625
+fault_detection_capacity: multi=0.500  single=2.000
+
+============================================================
+  Done. Requirement complete: http://books.toscrape.com — navigate to the next page of results
+============================================================

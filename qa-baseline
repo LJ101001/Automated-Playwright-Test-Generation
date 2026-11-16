@@ -1,0 +1,123 @@
+#!/bin/bash
+# Single-Agent Test Generation Baseline
+# Usage: ./qa-baseline "<url> — <feature description>"
+# Dissertation: Lewis Watson, 40619754, Edinburgh Napier University
+
+# Dynamically find the latest Claude Code binary across extension versions
+CLAUDE=$(find ~/.vscode/extensions/anthropic.claude-code-*/resources/native-binary/claude \
+  -type f 2>/dev/null | sort -V | tail -1)
+
+if [[ -z "$CLAUDE" || ! -x "$CLAUDE" ]]; then
+  echo "ERROR: Claude binary not found. Make sure the Claude Code VSCode extension is installed."
+  exit 1
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: ./qa-baseline \"<url> — <feature description>\""
+  echo "Example: ./qa-baseline \"http://books.toscrape.com — user can browse all books on homepage\""
+  exit 1
+fi
+
+REQUIREMENT="$1"
+cd "$SCRIPT_DIR"
+
+# Identical kebab-case feature name derivation to qa-pipeline
+FEATURE=$(echo "$REQUIREMENT" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | cut -c1-40)
+
+echo ""
+echo "=================================================="
+echo "  Single-Agent Test Generation Baseline"
+echo "  Requirement : $REQUIREMENT"
+echo "  Feature name: $FEATURE"
+echo "=================================================="
+echo ""
+
+echo "[1/1] Generating Playwright spec and evaluation (single agent)..."
+"$CLAUDE" -p "You are a QA engineer. Generate complete, executable Playwright TypeScript tests for the following requirement — all in one step, without decomposing into specialist roles or producing intermediate artefacts.
+
+REQUIREMENT: $REQUIREMENT
+FEATURE_NAME: $FEATURE
+
+## STEP 1 — Discover the live site
+
+Use WebFetch to visit the URL in the requirement. Inspect:
+- Real CSS selectors, IDs, data-test attributes, aria-labels
+- Exact button text, heading text, page URLs, error message strings
+- Navigate to all sub-pages involved in the feature under test
+- For pages that require interaction (e.g. SPAs), use Bash to run a Playwright diagnostic:
+  node -e \"const { chromium } = require('/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester/node_modules/playwright'); (async () => { const b = await chromium.launch({ headless: true }); const p = await b.newPage(); await p.goto('TARGET_URL'); await p.waitForLoadState('networkidle'); const btns = await p.\$\$eval('button', bs => bs.map(b => ({ text: b.innerText.trim().slice(0,80), disabled: b.disabled }))); console.log('BUTTONS:', JSON.stringify(btns)); const h1s = await p.\$\$eval('h1,h2', hs => hs.map(h => h.innerText.trim())); console.log('H1S:', JSON.stringify(h1s)); await b.close(); })().catch(e => console.error(e));\"
+  Replace TARGET_URL with the actual page URL.
+
+## STEP 2 — Write the Playwright spec
+
+Write a single TypeScript file at: tests/playwright/baseline-${FEATURE}.spec.ts
+
+Requirements for the spec file:
+- File header comment:
+  /**
+   * Feature: baseline-${FEATURE}
+   * Agent: Single-Agent Baseline
+   * Dissertation: Lewis Watson, 40619754
+   * Condition: single-agent (no role decomposition)
+   */
+- Use the Page Object Model: a class encapsulating all locators and interactions
+- Store ALL test values in a TEST_DATA constant at the top — never hard-coded inline
+- ONLY use selectors you confirmed by visiting the live site in Step 1
+- Use expect().toBeVisible(), toContainText(), toHaveURL(), toBeEnabled() — never waitForTimeout()
+- Cover the happy path with at least 3 positive tests
+- Cover negative cases and edge cases with at least 3 negative tests
+- Add a comment above each test citing:
+  // TC-NNN-P|F :: <test intent> [FR-NN]
+  where FR-NN is a functional requirement number you have assigned (FR-01, FR-02, etc.) to mentally decompose the feature. Assign FRs consistently across tests that cover the same behaviour.
+- test.use() MUST be at the TOP LEVEL of the file, never inside test.describe()
+- All interactions go through the Page Object class — no inline locators in test bodies
+
+## STEP 3 — Run the spec
+
+After writing the file, run:
+cd \"/Users/lewiswaton/Desktop/University/Honours Project/Multi Agent Tester\" && npx playwright test tests/playwright/baseline-${FEATURE}.spec.ts --reporter=json 2>&1 | tee test-results/baseline-${FEATURE}-raw.txt
+
+If tests fail, read the error, fix the spec (up to 2 iterations), then re-run.
+If a test still fails after 2 iterations due to live-site non-determinism, add test.skip() with a clear reason string.
+
+## STEP 4 — Write the evaluation report
+
+Parse the JSON from test-results/baseline-${FEATURE}-raw.txt (or test-results/results.json) and write docs/evaluation/BASELINE_EVAL_${FEATURE}.md:
+
+# Baseline Evaluation Report: ${FEATURE}
+
+**System**: Single-Agent Baseline (no role decomposition)
+**Dissertation**: Lewis Watson, 40619754
+**Date**: <today>
+**Requirement**: $REQUIREMENT
+
+## Test Execution Summary
+| Metric | Value |
+|--------|-------|
+| Total tests | N |
+| Tests passed | N |
+| Tests failed | N |
+| Success rate | XX% |
+| Duration | Xs |
+
+## Per-Test Results
+| TC ID | Test Name | Type | Status | Duration |
+|-------|-----------|------|--------|----------|
+
+## Failures Analysis
+[For each failure: test name, assertion that failed, error message, likely cause]
+
+## Summary
+[One paragraph on what the single-agent approach covered and missed]" \
+  --dangerously-skip-permissions
+
+echo ""
+echo "=================================================="
+echo "  Baseline complete for: $FEATURE"
+echo ""
+echo "  Artefacts written:"
+echo "    tests/playwright/baseline-${FEATURE}.spec.ts"
+echo "    docs/evaluation/BASELINE_EVAL_${FEATURE}.md"
+echo "=================================================="

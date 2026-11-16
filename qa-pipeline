@@ -1,0 +1,97 @@
+#!/bin/bash
+# Multi-Agent Test Generation Pipeline
+# Usage: ./qa-pipeline "requirement description"
+
+# Dynamically find the latest Claude Code binary across extension versions
+CLAUDE=$(find ~/.vscode/extensions/anthropic.claude-code-*/resources/native-binary/claude \
+  -type f 2>/dev/null | sort -V | tail -1)
+
+if [[ -z "$CLAUDE" || ! -x "$CLAUDE" ]]; then
+  echo "ERROR: Claude binary not found. Make sure the Claude Code VSCode extension is installed."
+  exit 1
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ -z "$1" ]]; then
+  echo "Usage: ./qa-pipeline \"requirement description\""
+  echo "Example: ./qa-pipeline \"Users can log in with email and password on SauceDemo\""
+  exit 1
+fi
+
+REQUIREMENT="$1"
+cd "$SCRIPT_DIR"
+
+# Derive kebab-case feature name from requirement
+FEATURE=$(echo "$REQUIREMENT" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | cut -c1-40)
+
+echo ""
+echo "=================================================="
+echo "  Multi-Agent Test Generation Pipeline"
+echo "  Requirement : $REQUIREMENT"
+echo "  Feature name: $FEATURE"
+echo "=================================================="
+echo ""
+
+# ── Step 1: Product Owner ──────────────────────────────
+echo "[1/5] Product Owner — interpreting requirement..."
+"$CLAUDE" -p "You are the product-owner agent. $(cat .claude/agents/product-owner.md | sed '/^---/,/^---/d')
+
+The requirement is: $REQUIREMENT
+Use '$FEATURE' as the feature name (kebab-case) for all file names." \
+  --dangerously-skip-permissions
+echo ""
+echo "  → Wrote docs/specs/USER_STORY_${FEATURE}.md"
+echo ""
+
+# ── Step 2: Business Analyst ───────────────────────────
+echo "[2/5] Business Analyst — writing functional spec..."
+"$CLAUDE" -p "You are the business-analyst agent. $(cat .claude/agents/business-analyst.md | sed '/^---/,/^---/d')
+
+The feature name is '$FEATURE'. Read docs/specs/USER_STORY_${FEATURE}.md and produce docs/specs/FUNCTIONAL_SPEC_${FEATURE}.md." \
+  --dangerously-skip-permissions
+echo ""
+echo "  → Wrote docs/specs/FUNCTIONAL_SPEC_${FEATURE}.md"
+echo ""
+
+# ── Step 3: Developer ─────────────────────────────────
+echo "[3/5] Developer — writing implementation summary..."
+"$CLAUDE" -p "You are the developer agent. $(cat .claude/agents/developer.md | sed '/^---/,/^---/d')
+
+The feature name is '$FEATURE'. Read docs/specs/FUNCTIONAL_SPEC_${FEATURE}.md and produce docs/specs/IMPL_SUMMARY_${FEATURE}.md." \
+  --dangerously-skip-permissions
+echo ""
+echo "  → Wrote docs/specs/IMPL_SUMMARY_${FEATURE}.md"
+echo ""
+
+# ── Step 4: Tester ────────────────────────────────────
+echo "[4/5] Tester — generating test cases and Playwright script..."
+"$CLAUDE" -p "You are the tester agent. $(cat .claude/agents/tester.md | sed '/^---/,/^---/d')
+
+The feature name is '$FEATURE'. Read docs/specs/FUNCTIONAL_SPEC_${FEATURE}.md and docs/specs/IMPL_SUMMARY_${FEATURE}.md. Produce docs/test-cases/TC_${FEATURE}.md and tests/playwright/${FEATURE}.spec.ts." \
+  --dangerously-skip-permissions
+echo ""
+echo "  → Wrote docs/test-cases/TC_${FEATURE}.md"
+echo "  → Wrote tests/playwright/${FEATURE}.spec.ts"
+echo ""
+
+# ── Step 5: Evaluator ─────────────────────────────────
+echo "[5/5] Evaluator — running tests and producing report..."
+"$CLAUDE" -p "You are the evaluator agent. $(cat .claude/agents/evaluator.md | sed '/^---/,/^---/d')
+
+The feature name is '$FEATURE'. Run tests/playwright/${FEATURE}.spec.ts, parse the results, and produce docs/evaluation/EVAL_${FEATURE}.md." \
+  --dangerously-skip-permissions
+echo ""
+
+# ── Summary ───────────────────────────────────────────
+echo "=================================================="
+echo "  Pipeline complete for: $FEATURE"
+echo ""
+echo "  Artefacts written:"
+echo "    docs/specs/USER_STORY_${FEATURE}.md"
+echo "    docs/specs/FUNCTIONAL_SPEC_${FEATURE}.md"
+echo "    docs/specs/IMPL_SUMMARY_${FEATURE}.md"
+echo "    docs/test-cases/TC_${FEATURE}.md"
+echo "    docs/evaluation/EVAL_${FEATURE}.md"
+echo "    tests/playwright/${FEATURE}.spec.ts"
+echo "=================================================="
